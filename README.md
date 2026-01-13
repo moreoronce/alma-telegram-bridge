@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./logo.jpg" alt="Alma Telegram Bridge Logo" width="120" />
+  <img src="./logo.png" alt="Alma Telegram Bridge Logo" width="120" />
   
   # Alma Telegram Bridge
 
