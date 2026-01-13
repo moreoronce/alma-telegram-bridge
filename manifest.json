@@ -1,0 +1,49 @@
+{
+  "id": "telegram-bridge",
+  "name": "Telegram Bridge",
+  "version": "1.0.0",
+  "description": "双向桥接 Telegram 与 Alma 对话",
+  "author": {
+    "name": "User"
+  },
+  "main": "dist/main.js",
+  "engines": {
+    "alma": "^0.1.0"
+  },
+  "type": "composite",
+  "permissions": [
+    "network:fetch",
+    "notifications",
+    "chat:read",
+    "chat:write",
+    "tools:register"
+  ],
+  "activationEvents": ["onStartup"],
+  "contributes": {
+    "configuration": {
+      "title": "Telegram Bridge Settings",
+      "properties": {
+        "telegram-bridge.botToken": {
+          "type": "string",
+          "default": "",
+          "description": "Telegram Bot Token (从 @BotFather 获取)"
+        },
+        "telegram-bridge.chatId": {
+          "type": "string",
+          "default": "",
+          "description": "接收消息的 Telegram Chat ID"
+        },
+        "telegram-bridge.threadId": {
+          "type": "string",
+          "default": "",
+          "description": "要桥接的 Alma 对话 Thread ID (可选)"
+        },
+        "telegram-bridge.pollingInterval": {
+          "type": "number",
+          "default": 2000,
+          "description": "轮询 Telegram API 的间隔时间 (毫秒)"
+        }
+      }
+    }
+  }
+}
